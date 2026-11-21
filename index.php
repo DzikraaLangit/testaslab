@@ -18,14 +18,19 @@ $data = mysqli_query($conn, "SELECT * FROM file");
     <div style="display: flex; justify-content: space-between; align-items: center;">
 
     <div>
-        <h2>Data Mahasiswa</h2>
+        <h2>Data File casprak</h2>
+        <p class="subtitle">
+            Selamat datang, <?= htmlspecialchars($_SESSION['username']) ?>!
+        </p>
     </div>
-
+    <a href="logout.php" class="btn btn-hapus">
+        Logout
+    </a>
 </div>
-    <p class="subtitle">Kelola data mahasiswa dengan mudah.</p>
+    <p class="subtitle">Kelola data file casprak dengan mudah.</p>
 
     <div class="card">
-
+        
         <a href="tambah.php" class="btn btn-tambah">
             + Tambah Mahasiswa
         </a>
