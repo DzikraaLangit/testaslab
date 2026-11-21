@@ -22,26 +22,26 @@ if (isset($_POST['submit'])) {
     exit;
 }
 
-$data = mysqli_query($conn, "SELECT * FROM mahasiswa WHERE id=$id");
+$data = mysqli_query($conn, "SELECT * FROM file WHERE id=$id");
 $mhs = mysqli_fetch_assoc($data);
 ?>
 
-<h2>Edit Mahasiswa</h2>
+<h2>Edit File</h2>
 <link rel="stylesheet" href="css/style.css">
 <div class="container">
         <div class="card">
-            <h2>Edit Mahasiswa</h2>
-            <p class="subtitle">Edit data mahasiswa.</p>
+            <h2>Edit File</h2>
+            <p class="subtitle">Edit File.</p>
 
             <form method="POST">
                 <label>Nama</label>
-                <input type="text" name="nama" value="<?= htmlspecialchars($mhs['nama']) ?>"><br><br>
+                <input type="text" name="nama_file" value="<?= htmlspecialchars($mhs['nama_file']) ?>"><br><br>
                 
                 <label>NIM</label>
-                <input type="text" name="nim" value="<?= htmlspecialchars($mhs['nim']) ?>"><br><br>
+                <input type="text" name="ukuran" value="<?= htmlspecialchars($mhs['ukuran']) ?>"><br><br>
                 
                 <label>Jurusan</label>
-                <input type="text" name="jurusan" value="<?= htmlspecialchars($mhs['jurusan']) ?>"><br><br>
+                <input type="text" name="created_at" value="<?= htmlspecialchars($mhs['created_at']) ?>"><br><br>
 
                 <button type="submit" name="submit" class="btn btn-hapus">Update</button>
             </form>
