@@ -10,12 +10,12 @@ if (isset($_POST['submit'])) {
 
     $query = mysqli_prepare(
         $conn,
-        "UPDATE mahasiswa
+        "UPDATE file
          SET nama_file=?, ukuran=?, created_at=?
          WHERE id=?"
     );
 
-    mysqli_stmt_bind_param($query, "sssi", $nama_file, $ukuran, $created_at);
+    mysqli_stmt_bind_param($query, "sss", $nama_file, $ukuran, $created_at);
     mysqli_stmt_execute($query);
 
     header("Location: index.php");
