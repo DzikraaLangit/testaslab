@@ -31,6 +31,7 @@ $data = mysqli_query($conn, "SELECT * FROM file");
 
         <table>
             <tr>
+                <th>id</th>
                 <th>Nama</th>
                 <th>Ukuran File</th>
                 <th>Dibuat pada</th>
@@ -38,6 +39,7 @@ $data = mysqli_query($conn, "SELECT * FROM file");
 
             <?php while ($mhs = mysqli_fetch_assoc($data)) { ?>
             <tr>
+                <td><?= htmlspecialchars($mhs['id']) ?></td>
                 <td><?= htmlspecialchars($mhs['nama_file']) ?></td>
                 <td><?= htmlspecialchars($mhs['ukuran']) ?></td>
                 <td><?= htmlspecialchars($mhs['created_at']) ?></td>

@@ -38,7 +38,7 @@ if (isset($_POST['submit'])) {
             <input type="text" name="ukuran" required>
 
             <label>Created At</label>
-            <input type="date" name="jurusan" required>
+            <input type="text" name="created_at" required>
 
             <p>
             <label for="file-upload">Choose files (required)</label>
