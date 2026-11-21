@@ -1,6 +1,7 @@
 <?php
 
 include "koneksi.php";
+include "auth.php";
 if (isset($_POST['submit'])) {
     $nama_file = $_POST['nama_file'];
     $ukuran = $_POST['ukuran'];

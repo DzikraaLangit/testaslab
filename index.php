@@ -2,6 +2,7 @@
 <?php
 
 include "koneksi.php";
+include "auth.php";
 $data = mysqli_query($conn, "SELECT * FROM file");
 ?>
 

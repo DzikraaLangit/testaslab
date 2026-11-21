@@ -1,6 +1,7 @@
 <?php
 
 include "koneksi.php";
+include "auth.php";
 $id = $_GET['id'];
 
 $query = mysqli_prepare($conn, "DELETE FROM file WHERE id=?");
